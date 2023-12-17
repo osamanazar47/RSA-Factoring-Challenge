@@ -15,7 +15,7 @@ int factorize(char *line)
 	{
 		if (num % i == 0)
 		{
-			printf("%llu=%lu*%lu\n", num, num / i, i);
+			printf("%lld=%ld*%ld\n", num, num / i, i);
 			break;
 		}
 	}
