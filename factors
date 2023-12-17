@@ -1,13 +1,14 @@
 #!/usr/bin/python
- def factorize_num(num):
-   primes = [2, 3, 5]
-   for prime in primes:
-     if num % prime == 0:
-       return prime, number // prime
-   return None, None
- with open("factors", "r") as file:
-   for line in file:
-     num = int(line.strip())
-     fac1, fac2 = factorize_num(num)
-     if fac1 is not None:
-       print("{}={}*{}".format(num, fac1, fac2))
+if __name__ == "__main__":
+   def factorize_num(num):
+     primes = [2, 3, 5]
+     for prime in primes:
+       if num % prime == 0:
+         return prime, number // prime
+     return None, None
+   with open("factors", "r") as file:
+     for line in file:
+       num = int(line.strip())
+       fac1, fac2 = factorize_num(num)
+       if fac1 is not None:
+         print("{}={}*{}".format(num, fac1, fac2))
