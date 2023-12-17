@@ -8,7 +8,7 @@
  */
 int factorize(char *line)
 {
-	unsigned int num, i;
+	u_int32_t num, i;
 
 	num = atoi(line);
 	for (i = 2; i < num; i++)
