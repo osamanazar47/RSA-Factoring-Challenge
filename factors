@@ -1,0 +1,7 @@
+#!/usr/bin/python
+ with open("factors", "r") as file:
+   primes = [2, 3, 5]
+   line = file.readline()
+   for n in primes:
+     if int(line) % n == 0:
+       print("{}={}*{}".format(int(line), int(line) / n, n))
