@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#define _GNU_SOURCE
 /**
  * factorize - a func that factorizes a number
  * @line: a pointer to the number
@@ -15,7 +16,7 @@ int factorize(char *line)
 	{
 		if (num % i == 0)
 		{
-			printf("%lld=%ld*%ld\n", num, num / i, i);
+			printf("%d=%d*%d\n", num, num/i, i);
 			break;
 		}
 	}
@@ -47,8 +48,6 @@ int main(int argc, char **argv)
 	}
 	while ((line = getline(&buffer, &count, file)) != -1)
 		factorize(buffer);
-	free(buffer);
-	fclose(file);
 	return (0);
 }
 
