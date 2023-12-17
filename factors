@@ -1,6 +1,5 @@
 #!/usr/bin/python
 def factorize_number(number):
-    factors = []
     divisor = 2
 
     while number > 1:
@@ -12,8 +11,10 @@ def factorize_number(number):
 
     return factors
 
+
+
 def main():
-    with open("tests/test00", "r") as file:
+    with open("factors", "r") as file:
         for line in file:
             number = int(line.strip())
             factors = factorize_number(number)
